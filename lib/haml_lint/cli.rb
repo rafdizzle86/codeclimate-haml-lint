@@ -87,7 +87,7 @@ module HamlLint
     # Outputs a report of the linter run using the specified reporter.
     def print_report(report, options)
       reporter = options.fetch(:reporter,
-                               HamlLint::Reporter::DefaultReporter).new(log)
+                               HamlLint::Reporter::CodeClimateReporter).new(log)
       reporter.display_report(report)
     end
 
